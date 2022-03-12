@@ -1,13 +1,40 @@
+:root {
+  /* Fuentes */
+  --fuente-titulo: "Montserrat", sans-serif;
+  --funte-titulo-bold: "Be Vietnam Pro", sans-serif;
+  --fuente-principal: "Outfit", sans-serif;
+
+  /* Tamaño */
+  --delgada: 200;
+  --regular: 400;
+  --grande: 600;
+
+  /* Colores */
+  --azul: #2448da;
+  --azul-fuerte: #1f3e72;
+  --celeste: #e7f3fc;
+  --gris: #697383;
+  --blanco: #ffffff;
+  --amarillo: #ffbb00;
+}
+
 html {
   font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 .navbar-container {
   height: 90px;
   align-items: center;
-
+  width: 50%;
   display: flex;
-  margin: 0px 90px;
+  margin-left: 90px;
   background-color: transparent;
 }
 
@@ -25,6 +52,8 @@ html {
   align-items: center;
   /* quitar espacio entre los elementos */
   justify-content: center;
+  width: 50%;
+  margin-left: 90px;
 }
 a {
   text-decoration: none !important;
@@ -40,15 +69,13 @@ a {
   color: black;
 }
 .nav-button a {
-  background-color: rgb(51, 82, 200);
-  color: white;
-  width: 100px;
-  padding: 10px;
-  border-radius: 5px;
-  text-decoration: none;
-  box-shadow: 2px 5px 5px -2px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 2px 5px 5px -2px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 2px 5px 5px -2px rgba(0, 0, 0, 0.35);
+  background-color: var(--azul);
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 0.5rem;
+  color: var(--blanco);
+  box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.22);
 }
 .nav-button a:hover {
   background-color: rgb(126, 136, 179);
@@ -61,6 +88,113 @@ a {
   top: 0;
   left: 1;
   right: 0;
-  bottom: 88%;
+  bottom: 90%;
   z-index: -1;
+}
+.container {
+  width: min(80%, 120rem);
+  margin: 0 auto;
+}
+
+.main-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.cover-text-container {
+  padding-left: 8rem;
+  background-image: url("../src/images/triangulitos.jpg");
+  background-blend-mode: soft-light;
+  height: 70rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.cover-text-container h1 {
+  color: var(--azul-fuerte);
+  font-weight: var(--grande);
+  font-family: var(--funte-titulo-bold);
+  text-transform: initial;
+  font-size: 5rem;
+  width: 90%;
+  text-align: left;
+}
+.cover-text-container p {
+  color: var(--gris);
+  font-size: 2rem;
+}
+
+.cover-image {
+  background-image: url("../src/images/cover-photo.jpg");
+  background-blend-mode: soft-light;
+  height: 70rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.fa-solid {
+  color: var(--amarillo);
+}
+
+.fa-clock {
+  color: var(--azul);
+}
+
+.etiqueta {
+  margin-top: 8rem;
+}
+
+.banner {
+  position: absolute;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  background: #ebf3fc;
+  border-radius: 0.5rem;
+  /* agregar sombra */
+  box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.22);
+  /* posicionar sobre la imagen */
+  top: 62rem;
+  left: 35%;
+  transform: translateX(-50%);
+}
+
+.banner .fa-solid {
+  color: var(--azul);
+  padding: auto;
+  background-color: var(--gris);
+  border-radius: 5px;
+}
+.banner p {
+  color: var(--gris);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+.banner-info {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  padding: 2rem;
+}
+.info-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.info {
+  display: flex;
+  flex-direction: row;
 }
